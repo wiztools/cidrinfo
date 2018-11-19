@@ -15,5 +15,5 @@ Count:       8,388,608
 ## Install
 
 ```
-go get github.com/wiztools/cidrinfo
+go install github.com/wiztools/cidrinfo
 ```
