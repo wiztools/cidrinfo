@@ -19,7 +19,8 @@ func netmask(m []byte) (string, error) {
 }
 
 func printCIDRInfo(cidrStr string) {
-	ip, network, err := net.ParseCIDR(cidrStr)
+	// First return is IP part, which is not needed in our case:
+	_, network, err := net.ParseCIDR(cidrStr)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "CIDR parse error: %v | %v.\n", cidrStr, err)
 		os.Exit(2)
@@ -28,7 +29,6 @@ func printCIDRInfo(cidrStr string) {
 	fmt.Println()
 
 	// Base info:
-	fmt.Println("IP:         ", ip)
 	fmt.Println("Network:    ", network)
 
 	// Netmask:
