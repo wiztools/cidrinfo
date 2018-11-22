@@ -45,6 +45,9 @@ func printCIDRInfo(cidrStr string) {
 	count := cidr.AddressCount(network)
 	prnt := message.NewPrinter(language.English)
 	prnt.Printf("Count:       %d\n", count)
+
+	// Type (private / public / mixed):
+	fmt.Println("Type:       ", getType(network))
 }
 
 func main() {
