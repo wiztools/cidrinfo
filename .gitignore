@@ -1,1 +1,6 @@
 cidrinfo
+
+# snapcraft ignores:
+*.snap
+stage
+prime

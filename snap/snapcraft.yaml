@@ -1,0 +1,18 @@
+name: cidrinfo
+version: git
+summary: Information on network CIDR.
+description: |
+  CIDRInfo prints information on the CIDR(s) passed as argument(s).
+
+grade: devel
+confinement: devmode
+
+parts:
+  cidrinfo:
+    source: .
+    plugin: go
+    go-importpath: github.com/wiztools/cidrinfo
+
+apps:
+  cidrinfo:
+    command: cidrinfo
