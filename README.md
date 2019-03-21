@@ -14,6 +14,14 @@ Type:        is-private
 
 ## Install
 
+Mac users can use [homebrew](https://brew.sh/):
+
+```
+brew install wiztools/repo/cidrinfo
+```
+
+Go users:
+
 ```
 go install github.com/wiztools/cidrinfo
 ```
